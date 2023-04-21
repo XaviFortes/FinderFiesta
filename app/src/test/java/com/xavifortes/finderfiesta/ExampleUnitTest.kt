@@ -1,4 +1,4 @@
-package com.example.finderfiesta
+package com.xavifortes.finderfiesta
 
 import org.junit.Test
 

@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    namespace 'com.example.finderfiesta'
+    namespace 'com.xavifortes.finderfiesta'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.finderfiesta"
-        minSdk 24
+        applicationId "com.xavifortes.finderfiesta"
+        minSdk 28
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -41,6 +41,4 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-    //Material design para editText
-    implementation 'com.google.android.material:material:1.8.0'
 }
