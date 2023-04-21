@@ -15,4 +15,13 @@
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:textAllCaps">false</item>
     </style>
+    <style name="mensajeregi">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#A6FFFFFF</item>
+        <item name="android:fontFamily">@font/anek_bangla</item>
+        <item name="android:shadowColor">#B827487A</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">4</item>
+        <item name="android:shadowRadius">4</item>
+    </style>
 </resources>

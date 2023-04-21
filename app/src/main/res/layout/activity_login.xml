@@ -7,7 +7,7 @@
 
     <Button
         android:id="@+id/btn_register"
-        android:style="@style/BotonPersonalizado1"
+        style="@style/BotonPersonalizado1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="false"
@@ -73,7 +73,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="244dp"
-        android:style="@style/BotonPersonalizado2"
+        style="@style/BotonPersonalizado2"
         android:text="Iniciar sesión"
         app:layout_constraintBottom_toTopOf="@+id/btn_register"
         app:layout_constraintEnd_toEndOf="parent"
