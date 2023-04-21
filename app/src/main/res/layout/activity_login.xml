@@ -7,6 +7,7 @@
 
     <Button
         android:id="@+id/btn_register"
+        style="@style/BotonPersonalizado1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="false"
@@ -38,6 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/Contraseña"
+
         app:layout_constraintEnd_toEndOf="@+id/Contraseña"
         app:layout_constraintHorizontal_bias="0.038"
         app:layout_constraintStart_toStartOf="@+id/Contraseña"
@@ -53,6 +55,7 @@
         android:layout_marginBottom="148dp"
         android:background="@drawable/rectangulo3"
         android:gravity="center"
+        android:textColorHint="@color/colorEditText"
         android:hint="Ingrese su Correo Electrónico"
         android:inputType="textEmailAddress"
         android:paddingLeft="25dp"
@@ -65,6 +68,7 @@
 
     <Button
         android:id="@+id/iniciar_ses"
+        style="@style/BotonPersonalizado2"
         android:layout_width="291dp"
         android:layout_height="49dp"
         android:layout_alignParentLeft="true"
@@ -85,6 +89,7 @@
         android:minHeight="48dp"
         android:text="Mantener Sesión Iniciada"
         android:textStyle="bold"
+        android:textColor="@color/colorEditText"
         app:layout_constraintBottom_toTopOf="@+id/iniciar_ses"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.262"
@@ -100,7 +105,9 @@
         android:layout_alignParentTop="true"
         android:layout_marginBottom="80dp"
         android:background="@drawable/rectangulo3"
+        android:textColorHint="@color/colorEditText"
         android:gravity="center"
+        android:textColor="@color/colorEditText"
         android:hint="Ingrese su Contraseña"
         android:inputType="textPassword"
         android:textSize="15dp"
