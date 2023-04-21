@@ -38,12 +38,17 @@
         android:id="@+id/iconoCandado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         app:layout_constraintBottom_toBottomOf="@+id/Contraseña"
 
         app:layout_constraintEnd_toEndOf="@+id/Contraseña"
+=======
+        app:layout_constraintBottom_toBottomOf="@+id/password"
+        app:layout_constraintEnd_toEndOf="@+id/password"
+>>>>>>> master
         app:layout_constraintHorizontal_bias="0.038"
-        app:layout_constraintStart_toStartOf="@+id/Contraseña"
-        app:layout_constraintTop_toTopOf="@+id/Contraseña"
+        app:layout_constraintStart_toStartOf="@+id/password"
+        app:layout_constraintTop_toTopOf="@+id/password"
         app:srcCompat="@drawable/candado" />
 
     <EditText
@@ -94,11 +99,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.262"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Contraseña"
+        app:layout_constraintTop_toBottomOf="@+id/password"
         app:layout_constraintVertical_bias="0.958" />
 
     <EditText
-        android:id="@+id/Contraseña"
+        android:id="@+id/password"
         android:layout_width="286dp"
         android:layout_height="50dp"
         android:layout_alignParentStart="true"
