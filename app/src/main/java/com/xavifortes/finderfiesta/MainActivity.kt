@@ -9,8 +9,11 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import okhttp3.FormBody
+import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.OkHttpClient
 import okhttp3.Request
+import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
 import java.net.HttpURLConnection
 import java.net.URL
@@ -31,14 +34,27 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun postLoginData() {
-        Toast.makeText(this, "a", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, "a", Toast.LENGTH_SHORT).show()
         CoroutineScope(Dispatchers.IO).launch {
             try {
+                println("A")
                 val url = "https://api.android.xavifortes.com/auth/login"
+                val reqBody = JSONObject()
+                reqBody.put("email", findViewById<EditText>(R.id.email).text.toString())
+                reqBody.put("password", findViewById<EditText>(R.id.password).text.toString())
+                val requestBody = reqBody.toString().toRequestBody("application/json; charset=utf-8".toMediaTypeOrNull())
+                /*
                 val requestBody = FormBody.Builder()
                     .add("email", findViewById<EditText>(R.id.email).text.toString())
                     .add("password", findViewById<EditText>(R.id.password).text.toString())
                     .build()
+                */
+                // val mediaType = "application/json; charset=utf-8".toMediaType()
+
+                println("Email: " + findViewById<EditText>(R.id.email).text.toString())
+                println("Password: " + findViewById<EditText>(R.id.password).text.toString())
+
+                //println("Request Body: " + requestBody.toString().toRequestBody(mediaType))
 
                 val request = Request.Builder()
                     .url(url)
@@ -53,9 +69,13 @@ class MainActivity : AppCompatActivity() {
                     println(responseData)
                 } else {
                     // Handle error
+                    println("Error " + response.code)
+                    println(response.body?.string())
+
                 }
             } catch (e: Exception) {
                 // Handle exception
+                println("Error" + e.message)
             }
         }
     }
@@ -76,7 +96,9 @@ class MainActivity : AppCompatActivity() {
         // Create the JSON data to be sent in the request body
         val postData = JSONObject()
         postData.put("email", email)
+        println("Email: $email")
         postData.put("password", password)
+        println("Password: $password")
 
         // Write the data to the request body
         val outputStream = connection.outputStream
