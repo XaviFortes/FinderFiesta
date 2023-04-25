@@ -24,7 +24,7 @@ class PartyListActivity : AppCompatActivity() {
         setContentView(R.layout.activity_party_list)
 
 
-
+        
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
