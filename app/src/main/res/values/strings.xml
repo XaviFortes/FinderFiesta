@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">FinderFiesta</string>
+    <string name="action_add_party">Add party</string>
+    <string name="menu_logout">Logout</string>
 </resources>

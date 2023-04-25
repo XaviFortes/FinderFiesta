@@ -1,5 +1,6 @@
 package com.xavifortes.finderfiesta
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -22,39 +23,58 @@ import java.net.URL
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
-        val bLogin = findViewById<Button>(R.id.iniciar_ses)
-        bLogin.setOnClickListener {
-            // Code to be executed when the button is clicked
-            // For example, show a toast message
-            // Toast.makeText(this, "Button clicked!", Toast.LENGTH_SHORT).show()
-            postLoginData()
+        // Check if the user is authenticated on startup
+        val prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE)
+        val token = prefs.getString("token", null)
+        if (token != null) {
+            checkAuthentication(token)
+        } else {
+            // Launch the login activity if no token is saved
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
+        }
+    }
 
+    private fun checkAuthentication(token: String) {
+        CoroutineScope(Dispatchers.IO).launch {
+            try {
+                val url = "https://api.android.xavifortes.com/auth/isAuthenticated"
+                val request = Request.Builder()
+                    .url(url)
+                    .header("Authorization", "Bearer $token")
+                    .build()
+
+                val client = OkHttpClient()
+                val response = client.newCall(request).execute()
+                if (response.isSuccessful) {
+                    // User is authenticated, continue to party list activity
+                    println("User is authenticated")
+                    println(response.code)
+                    println(response.body?.string())
+                    startActivity(Intent(this@MainActivity, PartyListActivity::class.java))
+                    finish()
+                } else {
+                    // User is not authenticated, launch login activity
+                    startActivity(Intent(this@MainActivity, LoginActivity::class.java))
+                    finish()
+                }
+            } catch (e: Exception) {
+                // Handle exception
+                runOnUiThread {
+                    Toast.makeText(applicationContext, "Error: ${e.message}", Toast.LENGTH_LONG).show()
+                }
+            }
         }
     }
 
     private fun postLoginData() {
-        //Toast.makeText(this, "a", Toast.LENGTH_SHORT).show()
         CoroutineScope(Dispatchers.IO).launch {
             try {
-                println("A")
                 val url = "https://api.android.xavifortes.com/auth/login"
                 val reqBody = JSONObject()
                 reqBody.put("email", findViewById<EditText>(R.id.email).text.toString())
                 reqBody.put("password", findViewById<EditText>(R.id.password).text.toString())
                 val requestBody = reqBody.toString().toRequestBody("application/json; charset=utf-8".toMediaTypeOrNull())
-                /*
-                val requestBody = FormBody.Builder()
-                    .add("email", findViewById<EditText>(R.id.email).text.toString())
-                    .add("password", findViewById<EditText>(R.id.password).text.toString())
-                    .build()
-                */
-                // val mediaType = "application/json; charset=utf-8".toMediaType()
-
-                println("Email: " + findViewById<EditText>(R.id.email).text.toString())
-                println("Password: " + findViewById<EditText>(R.id.password).text.toString())
-
-                //println("Request Body: " + requestBody.toString().toRequestBody(mediaType))
 
                 val request = Request.Builder()
                     .url(url)
@@ -65,13 +85,27 @@ class MainActivity : AppCompatActivity() {
                 val response = client.newCall(request).execute()
                 if (response.isSuccessful) {
                     val responseData = response.body?.string()
+
+                    // Extract the token from the JSON response
+                    val jsonObject = JSONObject(responseData)
+                    val token = jsonObject.getString("token")
+
+                    // Store the token in shared preferences
+                    val prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE)
+                    prefs.edit().putString("token", token).apply()
+
                     // Process the response data
                     println(responseData)
+
+                    // Launch the new activity
+                    //startActivity(Intent(this@LoginActivity, PartyListActivity::class.java))
+
+                    // Finish the current activity
+                    finish()
                 } else {
                     // Handle error
                     println("Error " + response.code)
                     println(response.body?.string())
-
                 }
             } catch (e: Exception) {
                 // Handle exception
@@ -79,6 +113,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
 
     private fun postLoginData2() {
         // Get the text from the email and password fields
