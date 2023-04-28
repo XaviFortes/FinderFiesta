@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create a new party"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextPartyName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Party name" />
+
+    <EditText
+        android:id="@+id/editTextPartyDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Party description" />
+
+    <EditText
+        android:id="@+id/editTextPartyDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Party date" />
+
+    <EditText
+        android:id="@+id/editTextPartyTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Party time (22:00)" />
+
+    <EditText
+        android:id="@+id/editTextPartyLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Party location" />
+
+    <Button
+        android:id="@+id/buttonCreateParty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create party" />
+
+</LinearLayout>

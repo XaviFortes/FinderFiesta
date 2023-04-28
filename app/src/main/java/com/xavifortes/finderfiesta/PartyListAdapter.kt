@@ -13,7 +13,9 @@ class PartyListAdapter(private val partyList: JSONArray) :
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val partyName: TextView = view.findViewById(R.id.party_name)
         val partyDate: TextView = view.findViewById(R.id.party_date)
+        val partyTime: TextView = view.findViewById(R.id.party_time)
         val partyLocation: TextView = view.findViewById(R.id.party_location)
+        val partyDesc: TextView = view.findViewById(R.id.party_description)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -26,7 +28,9 @@ class PartyListAdapter(private val partyList: JSONArray) :
         val party = partyList.getJSONObject(position)
         holder.partyName.text = party.getString("name")
         holder.partyDate.text = party.getString("date")
+        holder.partyTime.text = party.getString("time")
         holder.partyLocation.text = party.getString("location")
+        holder.partyDesc.text = party.getString("description")
     }
 
     override fun getItemCount() = partyList.length()

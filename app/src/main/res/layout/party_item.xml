@@ -58,11 +58,11 @@
             android:textSize="14sp" />
 
         <Button
-            android:id="@+id/btn_create_party"
+            android:id="@+id/btn_join_party"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Create Party"
+            android:text="Join Party"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/party_time" />
 
@@ -74,7 +74,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_create_party" />
+            app:layout_constraintTop_toBottomOf="@id/btn_join_party" />
 
     </LinearLayout>
 
