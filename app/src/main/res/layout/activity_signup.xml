@@ -49,7 +49,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginBottom="160dp"
         android:text="Registrate"
-        app:layout_constraintBottom_toTopOf="@+id/btn_register"
+        app:layout_constraintBottom_toTopOf="@+id/btn_2login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/repeatpassword"
@@ -97,7 +97,7 @@
         tools:ignore="TextSizeCheck" />
 
     <Button
-        android:id="@+id/btn_register"
+        android:id="@+id/btn_2login"
         style="@style/BotonPersonalizado1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -179,6 +179,7 @@
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.04"

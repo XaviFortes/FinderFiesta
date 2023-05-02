@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/btn_register"
+        android:id="@+id/btn_2login"
         style="@style/BotonPersonalizado1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -84,7 +84,7 @@
         android:paddingLeft="25dp"
         android:textColorHint="@color/colorEditText"
         android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/iniciar_ses"
+        app:layout_constraintBottom_toTopOf="@+id/btn_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
@@ -104,14 +104,14 @@
         android:textColor="@color/colorEditText"
         android:textColorHint="@color/colorEditText"
         android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/iniciar_ses"
+        app:layout_constraintBottom_toTopOf="@+id/btn_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TextSizeCheck" />
 
     <Button
-        android:id="@+id/iniciar_ses"
+        android:id="@+id/btn_login"
         style="@style/BotonPersonalizado2"
         android:layout_width="291dp"
         android:layout_height="49dp"
@@ -119,7 +119,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginBottom="144dp"
         android:text="Iniciar sesión"
-        app:layout_constraintBottom_toTopOf="@+id/btn_register"
+        app:layout_constraintBottom_toTopOf="@+id/btn_2login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -133,7 +133,7 @@
         android:text="Mantener Sesión Iniciada"
         android:textColor="@color/colorEditText"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/iniciar_ses"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.276"
         app:layout_constraintStart_toStartOf="parent" />
