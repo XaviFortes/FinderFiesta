@@ -15,10 +15,10 @@
             android:translateX="1.898"
             android:translateY="-1.446"
             android:pivotX="180"
-            android:pivotY="400"
+            android:pivotY="500"
             android:scaleX="2.89"
             android:scaleY="8.047"
-            android:rotation="74.157"
+            android:rotation="15"
             >
             <path
                 android:pathData="M0 0V800H360V0"
@@ -29,7 +29,7 @@
                         android:startX="20"
                         android:startY="315"
                         android:endX="270"
-                        android:endY="470"
+                        android:endY="700"
                         >
                         <item
                             android:color="#EBA987BD"

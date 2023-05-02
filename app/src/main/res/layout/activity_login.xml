@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+
     android:layout_height="match_parent">
 
     <Button
@@ -45,77 +46,6 @@
         app:layout_constraintTop_toTopOf="@+id/password"
         app:srcCompat="@drawable/candado" />
 
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="286dp"
-        android:layout_height="50dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginBottom="148dp"
-        android:background="@drawable/rectangulo3"
-        android:gravity="center"
-        android:textColorHint="@color/colorEditText"
-        android:hint="Ingrese su Correo Electrónico"
-        android:inputType="textEmailAddress"
-        android:paddingLeft="25dp"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/iniciar_ses"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TextSizeCheck" />
-
-    <Button
-        android:id="@+id/iniciar_ses"
-        style="@style/BotonPersonalizado2"
-        android:layout_width="291dp"
-        android:layout_height="49dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginBottom="244dp"
-        android:text="Iniciar sesión"
-        app:layout_constraintBottom_toTopOf="@+id/btn_register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <CheckBox
-        android:id="@+id/MantenerSesion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:minWidth="48dp"
-        android:minHeight="48dp"
-        android:text="Mantener Sesión Iniciada"
-        android:textStyle="bold"
-        android:textColor="@color/colorEditText"
-        app:layout_constraintBottom_toTopOf="@+id/iniciar_ses"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.262"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.958" />
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="286dp"
-        android:layout_height="50dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginBottom="80dp"
-        android:background="@drawable/rectangulo3"
-        android:textColorHint="@color/colorEditText"
-        android:gravity="center"
-        android:textColor="@color/colorEditText"
-        android:hint="Ingrese su Contraseña"
-        android:inputType="textPassword"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/iniciar_ses"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TextSizeCheck" />
-
     <ImageView
         android:id="@+id/iconoEmail"
         android:layout_width="wrap_content"
@@ -137,8 +67,76 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/fondo"
-        app:layout_constraintVertical_bias="0.836"
+        app:layout_constraintVertical_bias="0.752"
         app:srcCompat="@drawable/logo1" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="286dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="140dp"
+        android:background="@drawable/rectangulo3"
+        android:gravity="center"
+        android:hint="Ingrese su Correo Electrónico"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="25dp"
+        android:textColorHint="@color/colorEditText"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/iniciar_ses"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="286dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="72dp"
+        android:background="@drawable/rectangulo3"
+        android:gravity="center"
+        android:hint="Ingrese su Contraseña"
+        android:inputType="textPassword"
+        android:textColor="@color/colorEditText"
+        android:textColorHint="@color/colorEditText"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/iniciar_ses"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+    <Button
+        android:id="@+id/iniciar_ses"
+        style="@style/BotonPersonalizado2"
+        android:layout_width="291dp"
+        android:layout_height="49dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="144dp"
+        android:text="Iniciar sesión"
+        app:layout_constraintBottom_toTopOf="@+id/btn_register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/MantenerSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:text="Mantener Sesión Iniciada"
+        android:textColor="@color/colorEditText"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/iniciar_ses"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.276"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

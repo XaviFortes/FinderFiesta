@@ -17,32 +17,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="297dp"
-        android:layout_height="152dp"
-        android:layout_marginTop="100dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/fondo"
-        app:srcCompat="@drawable/logo2" />
-
-    <TextView
-        android:id="@+id/mensajeregi"
-        android:layout_width="305dp"
-        android:layout_height="81dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="8dp"
-        android:gravity="center_horizontal|top"
-        android:text="Todavía no tienes una cuenta, regístrate y entérate de las mejores fiestas del momento!"
-        android:textAppearance="@style/mensajeregi"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
@@ -51,7 +25,7 @@
         android:layout_height="50dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
         android:background="@drawable/rectangulo3"
         android:gravity="center"
         android:hint="Ingrese su Correo Electrónico"
@@ -59,11 +33,157 @@
         android:paddingLeft="25dp"
         android:textColorHint="@color/colorEditText"
         android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/password"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mensajeregi"
         tools:ignore="TextSizeCheck" />
 
 
+    <Button
+        android:id="@+id/registrar"
+        style="@style/BotonPersonalizado2"
+        android:layout_width="291dp"
+        android:layout_height="49dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="160dp"
+        android:text="Registrate"
+        app:layout_constraintBottom_toTopOf="@+id/btn_register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/repeatpassword"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/repeatpassword"
+        android:layout_width="286dp"
+        android:layout_height="53dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="300dp"
+        android:background="@drawable/rectangulo3"
+        android:gravity="center"
+        android:hint="Vuelva a Ingresar su Contraseña"
+        android:inputType="textPassword"
+        android:paddingLeft="25dp"
+        android:textColor="@color/colorEditText"
+        android:textColorHint="@color/colorEditText"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/fondo"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="@+id/fondo"
+        tools:ignore="TextSizeCheck" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="286dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="376dp"
+        android:background="@drawable/rectangulo3"
+        android:gravity="center"
+        android:hint="Ingrese su Contraseña"
+        android:inputType="textPassword"
+        android:textColor="@color/colorEditText"
+        android:textColorHint="@color/colorEditText"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/fondo"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="@+id/fondo"
+        tools:ignore="TextSizeCheck" />
+
+    <Button
+        android:id="@+id/btn_register"
+        style="@style/BotonPersonalizado1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="false"
+        android:text="¿Tienes ya una cuenta creada? Iniciar Sesión"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/iconoCandado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/password"
+        app:layout_constraintEnd_toEndOf="@+id/password"
+        app:layout_constraintHorizontal_bias="0.038"
+        app:layout_constraintStart_toStartOf="@+id/password"
+        app:layout_constraintTop_toTopOf="@+id/password"
+        app:srcCompat="@drawable/candado" />
+
+    <ImageView
+        android:id="@+id/iconoCandadoRepeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/repeatpassword"
+        app:layout_constraintEnd_toEndOf="@+id/repeatpassword"
+        app:layout_constraintHorizontal_bias="0.038"
+        app:layout_constraintStart_toStartOf="@+id/repeatpassword"
+
+        app:layout_constraintTop_toTopOf="@+id/repeatpassword"
+        app:srcCompat="@drawable/candado" />
+
+    <ImageView
+        android:id="@+id/iconoEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/email"
+        app:layout_constraintEnd_toEndOf="@+id/email"
+        app:layout_constraintHorizontal_bias="0.035"
+        app:layout_constraintStart_toStartOf="@+id/email"
+        app:layout_constraintTop_toTopOf="@+id/email"
+        app:layout_constraintVertical_bias="0.466"
+        app:srcCompat="@drawable/email"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/mensajeregi"
+        android:layout_width="260dp"
+        android:layout_height="81dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="44dp"
+        android:gravity="center_horizontal|top"
+        android:text="Todavía no tienes una cuenta, regístrate y entérate de las mejores fiestas del momento!"
+        android:textAppearance="@style/mensajeregi"
+        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fondo"
+        app:srcCompat="@drawable/logo2" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.148"
+        app:srcCompat="@drawable/atras" />
 </androidx.constraintlayout.widget.ConstraintLayout>
