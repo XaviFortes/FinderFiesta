@@ -9,7 +9,7 @@
     </style>
     <style name="BotonPersonalizado2" parent="Widget.AppCompat.Button">
         <item name="android:textSize">13sp</item>
-        <item name="android:background">@drawable/rectangulo2</item>
+        <item name="android:background">@drawable/rectangulo2</item>s
         <item name="android:textStyle">bold</item>
         <item name="android:fontFamily">@font/anek_bangla</item>
         <item name="android:textColor">#FFFFFF</item>
@@ -19,6 +19,13 @@
         <item name="android:textSize">15sp</item>
         <item name="android:textColor">#A6FFFFFF</item>
         <item name="android:fontFamily">@font/anek_bangla</item>
+        <item name="android:shadowColor">#B827487A</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">4</item>
+        <item name="android:shadowRadius">4</item>
+    </style>
+    <style name="correoexamp">
+        <item name="android:textSize">15sp</item>
         <item name="android:shadowColor">#B827487A</item>
         <item name="android:shadowDx">0</item>
         <item name="android:shadowDy">4</item>

@@ -40,20 +40,7 @@
         tools:ignore="TextSizeCheck" />
 
 
-    <Button
-        android:id="@+id/registrar"
-        style="@style/BotonPersonalizado2"
-        android:layout_width="291dp"
-        android:layout_height="49dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginBottom="160dp"
-        android:text="Registrate"
-        app:layout_constraintBottom_toTopOf="@+id/btn_2login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/repeatpassword"
-        app:layout_constraintVertical_bias="1.0" />
+
 
     <EditText
         android:id="@+id/repeatpassword"
@@ -147,6 +134,7 @@
         app:srcCompat="@drawable/email"
         tools:ignore="ImageContrastCheck" />
 
+
     <TextView
         android:id="@+id/mensajeregi"
         android:layout_width="260dp"
@@ -159,34 +147,32 @@
         android:textAppearance="@style/mensajeregi"
         app:layout_constraintBottom_toTopOf="@+id/email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
         app:layout_constraintVertical_bias="1.0" />
-
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        app:layout_constraintBottom_toTopOf="@+id/email"
+        android:layout_marginTop="136dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/fondo"
-        app:layout_constraintVertical_bias="0.365"
-        app:srcCompat="@drawable/logo2" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.04"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.148"
-        app:srcCompat="@drawable/atras" />
+        app:srcCompat="@drawable/logo2" />
+    <Button
+        android:id="@+id/registrar"
+        style="@style/BotonPersonalizado2"
+        android:layout_width="291dp"
+        android:layout_height="49dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="160dp"
+        android:text="Registrate"
+        app:layout_constraintBottom_toTopOf="@+id/btn_2login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/repeatpassword"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
