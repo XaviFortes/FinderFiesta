@@ -26,10 +26,10 @@
                 <aapt:attr name="android:fillColor">
                     <gradient
                         android:type="linear"
-                        android:startX="20"
-                        android:startY="600"
-                        android:endX="320"
-                        android:endY="700"
+                        android:startX="50"
+                        android:startY="350"
+                        android:endX="300"
+                        android:endY="370"
                         >
                         <item
                             android:color="#EBA987BD"
