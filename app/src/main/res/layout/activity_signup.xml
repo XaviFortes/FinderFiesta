@@ -162,7 +162,7 @@
         app:srcCompat="@drawable/logo2" />
 
     <Button
-        android:id="@+id/registrar"
+        android:id="@+id/btn_signup"
         style="@style/BotonPersonalizado2"
         android:layout_width="291dp"
         android:layout_height="49dp"
