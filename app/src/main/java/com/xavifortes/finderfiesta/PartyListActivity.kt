@@ -46,8 +46,10 @@ class PartyListActivity : AppCompatActivity() {
             fetchParties(token)
         }
 
-        // Fetch the parties
-        fetchParties(token)
+        // Set the degradado as the background of the ActionBar
+        supportActionBar?.setBackgroundDrawable(resources.getDrawable(R.drawable.fondo_login))
+        //supportActionBar?.setLogo(R.drawable.logo2)
+        //supportActionBar?.setDisplayShowTitleEnabled(false)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
