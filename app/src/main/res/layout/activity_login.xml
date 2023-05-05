@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/btn_2login"
+        android:id="@+id/btn_verify_2login"
         style="@style/BotonPersonalizado1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -119,7 +119,20 @@
         android:layout_alignParentTop="true"
         android:layout_marginBottom="144dp"
         android:text="Iniciar sesión"
-        app:layout_constraintBottom_toTopOf="@+id/btn_2login"
+        app:layout_constraintBottom_toTopOf="@+id/btn_verify_2login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_login_2verify"
+        style="@style/BotonPersonalizado2"
+        android:layout_width="291dp"
+        android:layout_height="49dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="84dp"
+        android:text="Verificar"
+        app:layout_constraintBottom_toTopOf="@+id/btn_verify_2login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

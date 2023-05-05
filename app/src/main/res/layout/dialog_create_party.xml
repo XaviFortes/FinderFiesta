@@ -7,7 +7,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Create a new party"
+        android:text="¡Crear pedazo fiesta!"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -15,36 +15,39 @@
         android:id="@+id/editTextPartyName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Party name" />
+        android:hint="Nombre de la party" />
 
     <EditText
         android:id="@+id/editTextPartyDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Party description" />
+        android:hint="Descripción de la party" />
 
     <EditText
         android:id="@+id/editTextPartyDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Party date" />
+        android:ems="10"
+        android:hint="Fecha Fiesta (yyyy-mm-dd)"
+        android:inputType="date" />
 
     <EditText
         android:id="@+id/editTextPartyTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Party time (22:00)" />
+        android:ems="10"
+        android:hint="Hora Fiesta (22:00)" />
 
     <EditText
         android:id="@+id/editTextPartyLocation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Party location" />
+        android:hint="¿Donde será?" />
 
     <Button
         android:id="@+id/buttonCreateParty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Create party" />
+        android:text="Crear" />
 
 </LinearLayout>

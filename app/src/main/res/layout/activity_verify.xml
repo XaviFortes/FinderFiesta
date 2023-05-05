@@ -24,29 +24,12 @@
         android:layout_height="56dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginBottom="12dp"
         android:gravity="center_horizontal|top"
         android:text="Introduce el código de verificación que le hemos enviado a el correo:"
         android:textAppearance="@style/mensajeregi"
-        app:layout_constraintBottom_toTopOf="@+id/correoexamp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/correoexamp"
-        android:layout_width="286dp"
-        android:layout_height="28dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:gravity="center_horizontal|top"
-        android:text="correo@example.com"
-        android:textAppearance="@style/correoexamp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.448" />
+        tools:layout_editor_absoluteY="191dp" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -56,16 +39,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/fondo"
-        app:layout_constraintVertical_bias="0.938"
+        app:layout_constraintVertical_bias="0.797"
         app:srcCompat="@drawable/logo3" />
 
     <EditText
-        android:id="@+id/codigo"
+        android:id="@+id/codeVerify"
         android:layout_width="286dp"
         android:layout_height="50dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginBottom="380dp"
+        android:layout_marginBottom="352dp"
         android:background="@drawable/rectangulo3"
         android:gravity="center"
         android:hint="Ingrese Código de Verificación"
@@ -77,24 +60,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/correoexamp"
         tools:ignore="TextSizeCheck" />
 
     <ImageView
         android:id="@+id/iconoEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/codigo"
-        app:layout_constraintEnd_toEndOf="@+id/codigo"
+        app:layout_constraintBottom_toBottomOf="@+id/codeVerify"
+        app:layout_constraintEnd_toEndOf="@+id/codeVerify"
         app:layout_constraintHorizontal_bias="0.035"
-        app:layout_constraintStart_toStartOf="@+id/codigo"
-        app:layout_constraintTop_toTopOf="@+id/codigo"
+        app:layout_constraintStart_toStartOf="@+id/codeVerify"
+        app:layout_constraintTop_toTopOf="@+id/codeVerify"
         app:layout_constraintVertical_bias="0.466"
         app:srcCompat="@drawable/escudo"
         tools:ignore="ImageContrastCheck" />
 
     <Button
-        android:id="@+id/btn_2login"
+        android:id="@+id/btn_verify_2login"
         style="@style/BotonPersonalizado1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -117,14 +99,14 @@
         android:gravity="center_horizontal|top"
         android:text="¿No ha recibido el código de verificación? Podemos  Volver a Intentarlo "
         android:textAppearance="@style/mensajeregi"
-        app:layout_constraintBottom_toTopOf="@+id/btn_2login"
+        app:layout_constraintBottom_toTopOf="@+id/btn_verify_2login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/verificar"
+        app:layout_constraintTop_toBottomOf="@+id/btn_verify"
         app:layout_constraintVertical_bias="0.179" />
 
     <Button
-        android:id="@+id/verificar"
+        android:id="@+id/btn_verify"
         style="@style/BotonPersonalizado2"
         android:layout_width="291dp"
         android:layout_height="49dp"
@@ -132,10 +114,25 @@
         android:layout_alignParentTop="true"
         android:layout_marginBottom="160dp"
         android:text="Verificar"
-        app:layout_constraintBottom_toTopOf="@+id/btn_2login"
+        app:layout_constraintBottom_toTopOf="@+id/btn_verify_2login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/codigo"
+        app:layout_constraintTop_toBottomOf="@+id/codeVerify"
         app:layout_constraintVertical_bias="0.259" />
+
+    <EditText
+        android:id="@+id/emailVerify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Email"
+        app:layout_constraintBottom_toTopOf="@+id/codeVerify"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mensajeregi"
+        app:layout_constraintVertical_bias="0.392" />
 </androidx.constraintlayout.widget.ConstraintLayout>

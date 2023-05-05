@@ -25,7 +25,12 @@ class LoginActivity : AppCompatActivity() {
             postLoginData()
         }
 
-        val signupButton = findViewById<Button>(R.id.btn_2login)
+        val verifyButton = findViewById<Button>(R.id.btn_login_2verify)
+        verifyButton.setOnClickListener {
+            startActivity(Intent(this@LoginActivity, VerifyActivity::class.java))
+        }
+
+        val signupButton = findViewById<Button>(R.id.btn_verify_2login)
         signupButton.setOnClickListener {
             startActivity(Intent(this@LoginActivity, SignupActivity::class.java))
         }

@@ -15,39 +15,37 @@ import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
 
-class SignupActivity  : AppCompatActivity()  {
+class VerifyActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_signup)
+        setContentView(R.layout.activity_verify)
 
-        val signinButton = findViewById<Button>(R.id.btn_verify_2login)
-        signinButton.setOnClickListener {
-            startActivity(Intent(this@SignupActivity, LoginActivity::class.java))
+        if (intent.hasExtra("email")) {
+            val email = intent.getStringExtra("email")
+            val emailEditText = findViewById<EditText>(R.id.emailVerify)
+            emailEditText.setText(email)
         }
 
-        val signupButton = findViewById<Button>(R.id.btn_signup)
-        signupButton.setOnClickListener {
-            postSignupData()
+        val verifyButton = findViewById<Button>(R.id.btn_verify)
+        verifyButton.setOnClickListener {
+            postVerifyData()
+        }
+
+        val loginButton = findViewById<Button>(R.id.btn_verify_2login)
+        loginButton.setOnClickListener {
+            startActivity(Intent(this@VerifyActivity, LoginActivity::class.java))
         }
     }
 
-
-    private fun postSignupData() {
+    private fun postVerifyData() {
         CoroutineScope(Dispatchers.IO).launch {
-            val email = findViewById<EditText>(R.id.email).text.toString()
-            val password = findViewById<EditText>(R.id.password).text.toString()
-            val password2 = findViewById<EditText>(R.id.repeatpassword).text.toString()
-            if (password != password2) {
-                runOnUiThread {
-                    Toast.makeText(applicationContext, "Passwords don't match", Toast.LENGTH_LONG).show()
-                }
-                return@launch
-            }
+            val email = findViewById<EditText>(R.id.emailVerify).text.toString()
+            val code = findViewById<EditText>(R.id.codeVerify).text.toString()
             try {
-                val url = "https://api.android.xavifortes.com/auth/signup"
+                val url = "https://api.android.xavifortes.com/auth/verify"
                 val reqBody = JSONObject()
-                reqBody.put("email", findViewById<EditText>(R.id.email).text.toString())
-                reqBody.put("password", findViewById<EditText>(R.id.password).text.toString())
+                reqBody.put("email", email)
+                reqBody.put("verificationCode", code)
                 val requestBody = reqBody.toString().toRequestBody("application/json; charset=utf-8".toMediaTypeOrNull())
 
                 val request = Request.Builder()
@@ -59,12 +57,8 @@ class SignupActivity  : AppCompatActivity()  {
                 val response = client.newCall(request).execute()
                 if (response.isSuccessful) {
 
-                    runOnUiThread {
-                        Toast.makeText(applicationContext, "Te has registrado, comprueba tu correo", Toast.LENGTH_LONG).show()
-                    }
-
                     // Launch the new activity
-                    startActivity(Intent(this@SignupActivity, VerifyActivity::class.java))
+                    startActivity(Intent(this@VerifyActivity, PartyListActivity::class.java))
 
                     // Finish the current activity
                     finish()

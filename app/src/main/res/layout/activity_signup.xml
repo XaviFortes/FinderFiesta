@@ -34,7 +34,7 @@
         android:paddingLeft="25dp"
         android:textColorHint="@color/colorEditText"
         android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_2login"
+        app:layout_constraintBottom_toTopOf="@+id/btn_verify_2login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -82,7 +82,7 @@
         tools:ignore="TextSizeCheck" />
 
     <Button
-        android:id="@+id/btn_2login"
+        android:id="@+id/btn_verify_2login"
         style="@style/BotonPersonalizado1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -142,7 +142,7 @@
         android:gravity="center_horizontal|top"
         android:text="Todavía no tienes una cuenta, regístrate y entérate de las mejores fiestas del momento!"
         android:textAppearance="@style/mensajeregi"
-        app:layout_constraintBottom_toTopOf="@+id/btn_2login"
+        app:layout_constraintBottom_toTopOf="@+id/btn_verify_2login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.421"
         app:layout_constraintStart_toStartOf="parent"
@@ -153,7 +153,7 @@
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/btn_2login"
+        app:layout_constraintBottom_toTopOf="@+id/btn_verify_2login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.44"
         app:layout_constraintStart_toStartOf="parent"

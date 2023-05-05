@@ -36,6 +36,11 @@
             android:theme="@style/Theme.FinderFiesta2"
             android:exported="true">
         </activity>
+        <activity
+            android:name=".VerifyActivity"
+            android:theme="@style/Theme.FinderFiesta2"
+            android:exported="true">
+        </activity>
 
 
     </application>
