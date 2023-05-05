@@ -47,9 +47,11 @@ class PartyListActivity : AppCompatActivity() {
         }
 
         // Set the degradado as the background of the ActionBar
-        supportActionBar?.setBackgroundDrawable(resources.getDrawable(R.drawable.fondo_login))
-        //supportActionBar?.setLogo(R.drawable.logo2)
-        //supportActionBar?.setDisplayShowTitleEnabled(false)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+        supportActionBar?.setBackgroundDrawable(resources.getDrawable(R.drawable.fondo_register))
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+        supportActionBar?.setLogo(R.drawable.logo4)
+        supportActionBar?.setDisplayUseLogoEnabled(true)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
