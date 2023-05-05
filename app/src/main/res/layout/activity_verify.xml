@@ -15,8 +15,10 @@
         android:background="@drawable/fondo_verificar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/mensajeregi"
@@ -27,40 +29,23 @@
         android:gravity="center_horizontal|top"
         android:text="Introduce el código de verificación que le hemos enviado a el correo:"
         android:textAppearance="@style/mensajeregi"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="191dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.273" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/mensajeregi"
+        app:layout_constraintBottom_toTopOf="@+id/btn_verify_2login"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/fondo"
-        app:layout_constraintVertical_bias="0.797"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.14"
         app:srcCompat="@drawable/logo3" />
-
-    <EditText
-        android:id="@+id/codeVerify"
-        android:layout_width="286dp"
-        android:layout_height="50dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginBottom="352dp"
-        android:background="@drawable/rectangulo3"
-        android:gravity="center"
-        android:hint="Ingrese Código de Verificación"
-        android:inputType="textEmailAddress"
-        android:paddingLeft="25dp"
-        android:textColorHint="@color/colorEditText"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="@+id/fondo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TextSizeCheck" />
 
     <ImageView
         android:id="@+id/iconoEmail"
@@ -103,7 +88,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_verify"
-        app:layout_constraintVertical_bias="0.179" />
+        app:layout_constraintVertical_bias="0.337" />
 
     <Button
         android:id="@+id/btn_verify"
@@ -116,23 +101,64 @@
         android:text="Verificar"
         app:layout_constraintBottom_toTopOf="@+id/btn_verify_2login"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/codeVerify"
-        app:layout_constraintVertical_bias="0.259" />
+        app:layout_constraintVertical_bias="0.538" />
 
     <EditText
         android:id="@+id/emailVerify"
+        android:layout_width="286dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/rectangulo3"
+        android:gravity="center"
+        android:hint="Ingrese su Correo Electrónico"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="25dp"
+        android:textColorHint="@color/colorEditText"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fondo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.385"
+        tools:ignore="TextSizeCheck" />
+
+    <EditText
+        android:id="@+id/codeVerify"
+        android:layout_width="286dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/rectangulo3"
+        android:gravity="center"
+        android:hint="Ingrese Código de Verificación"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="25dp"
+        android:textColorHint="@color/colorEditText"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fondo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailVerify"
+        app:layout_constraintVertical_bias="0.052"
+        tools:ignore="TextSizeCheck" />
+
+    <ImageView
+        android:id="@+id/iconoEmail2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Email"
-        app:layout_constraintBottom_toTopOf="@+id/codeVerify"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mensajeregi"
-        app:layout_constraintVertical_bias="0.392" />
+        app:layout_constraintBottom_toBottomOf="@+id/emailVerify"
+        app:layout_constraintEnd_toEndOf="@+id/emailVerify"
+        app:layout_constraintHorizontal_bias="0.035"
+        app:layout_constraintStart_toStartOf="@+id/emailVerify"
+        app:layout_constraintTop_toTopOf="@+id/emailVerify"
+        app:layout_constraintVertical_bias="0.466"
+        app:srcCompat="@drawable/email"
+        tools:ignore="ImageContrastCheck" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
