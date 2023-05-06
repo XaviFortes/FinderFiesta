@@ -62,6 +62,9 @@ class PartyListAdapter(private val partyList: JSONArray, context: Context) :
                 holder.partyJoin.isEnabled = false
                 holder.partyJoin.text = "Ya estás dentro"
                 break
+            } else {
+                holder.partyJoin.isEnabled = true
+                holder.partyJoin.text = "Unirse"
             }
         }
 
