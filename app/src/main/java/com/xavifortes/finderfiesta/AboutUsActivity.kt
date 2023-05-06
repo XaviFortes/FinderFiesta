@@ -33,6 +33,10 @@ class AboutUsActivity : AppCompatActivity() {
         caLinkedinButton.setOnClickListener {
             startActivity(android.content.Intent(android.content.Intent.ACTION_VIEW, android.net.Uri.parse("https://www.linkedin.com/in/carlos-ant%C3%B3n-ibeas-92a2a9197/")))
         }
+        // Set the degradado as the background of the ActionBar
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+        supportActionBar?.setBackgroundDrawable(resources.getDrawable(R.drawable.fondo_register))
+        supportActionBar?.setDisplayUseLogoEnabled(true)
     }
 
     override fun onSupportNavigateUp(): Boolean {

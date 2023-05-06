@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@drawable/fondo_partylist">
 
     <Button
         android:id="@+id/calin"
@@ -13,21 +13,27 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="LinkedIn"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/ca"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/ca"
-        app:layout_constraintTop_toBottomOf="@+id/ca" />
+        app:layout_constraintTop_toBottomOf="@+id/ca"
+        app:layout_constraintVertical_bias="0.045" />
 
     <TextView
         android:id="@+id/ca"
         android:layout_width="102dp"
-        android:layout_height="18dp"
+        android:layout_height="26dp"
         android:text="Carlos Antón"
         android:textAlignment="center"
+        android:textAppearance="@style/mensajeregi"
+        android:textColor="@color/colorPrimario"
         app:layout_constraintBottom_toBottomOf="@+id/xf"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.948"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/chlin"
@@ -35,21 +41,27 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="LinkedIn"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/charlie"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/charlie"
-        app:layout_constraintTop_toBottomOf="@+id/charlie" />
+        app:layout_constraintTop_toBottomOf="@+id/charlie"
+        app:layout_constraintVertical_bias="0.045" />
 
     <TextView
         android:id="@+id/charlie"
         android:layout_width="102dp"
-        android:layout_height="18dp"
+        android:layout_height="28dp"
         android:text="Carlos Hinojosa"
         android:textAlignment="center"
+        android:textAppearance="@style/mensajeregi"
+        android:textColor="@color/colorPrimario"
         app:layout_constraintBottom_toBottomOf="@+id/xf"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.051"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/title_textview"
@@ -57,9 +69,10 @@
         android:layout_height="wrap_content"
         android:padding="24dp"
         android:text="Sobre Nosotros"
-        android:textColor="@color/black"
+        android:textAppearance="@style/correoexamp"
         android:textSize="28sp"
         android:textStyle="bold"
+        android:textColor="@color/colorPrimario"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -74,30 +87,37 @@
         android:layout_marginTop="328dp"
         android:paddingStart="24dp"
         android:paddingTop="16dp"
-        android:text="Version: 1.0.0"
-        android:textColor="@color/gray"
+        android:text="Versión: 1.0.0"
+        android:textAppearance="@style/correoexamp"
+        android:textColor="@color/colorPrimario"
         android:textSize="18sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/team_textview"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/team_textview"
-        android:layout_width="153dp"
-        android:layout_height="47dp"
+        android:layout_width="158dp"
+        android:layout_height="55dp"
         android:paddingStart="24dp"
         android:paddingTop="16dp"
         android:text="Miembros"
         android:textAlignment="textStart"
-        android:textColor="@color/gray"
+        android:textAppearance="@style/mensajeregi"
+        android:textColor="@color/colorPrimario"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/xf"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.966" />
+        app:layout_constraintVertical_bias="0.96" />
 
     <ImageView
         android:id="@+id/logo_imageview"
@@ -113,9 +133,11 @@
 
     <TextView
         android:id="@+id/xf"
-        android:layout_width="102dp"
-        android:layout_height="18dp"
+        android:layout_width="95dp"
+        android:layout_height="28dp"
         android:text="Xavi Fortes"
+        android:textColor="@color/colorPrimario"
+        android:textAppearance="@style/mensajeregi"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -130,18 +152,25 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="LinkedIn"
+ 
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/xf"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/xf"
-        app:layout_constraintTop_toBottomOf="@+id/xf" />
+        app:layout_constraintTop_toBottomOf="@+id/xf"
+        app:layout_constraintVertical_bias="0.045" />
 
     <Button
         android:id="@+id/xfweb"
         android:layout_width="103dp"
         android:layout_height="49dp"
+        android:layout_marginTop="16dp"
         android:text="Website"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/xf"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/xf"
-        app:layout_constraintTop_toBottomOf="@+id/xflin" />
+        app:layout_constraintTop_toBottomOf="@+id/xflin"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
