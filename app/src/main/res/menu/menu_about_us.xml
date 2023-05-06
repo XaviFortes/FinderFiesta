@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_go_back"
+        android:title="Go back"
+        android:icon="@drawable/ic_backspace"
+        app:showAsAction="always"/>
+
+</menu>

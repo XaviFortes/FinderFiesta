@@ -72,6 +72,10 @@ class PartyListActivity : AppCompatActivity() {
             showCreatePartyDialog()
             return true
         }
+        if (id == R.id.action_about_us) {
+            startActivity(Intent(this@PartyListActivity, AboutUsActivity::class.java))
+            return true
+        }
         if (id == R.id.action_logout) {
             // Remove the token from shared preferences
             sharedPref.edit().remove("token").apply()
@@ -107,7 +111,7 @@ class PartyListActivity : AppCompatActivity() {
                     runOnUiThread {
                         val recyclerView = findViewById<androidx.recyclerview.widget.RecyclerView>(R.id.party_list)
                         recyclerView.layoutManager = LinearLayoutManager(applicationContext)
-                        recyclerView.adapter = PartyListAdapter(partyList)
+                        recyclerView.adapter = PartyListAdapter(partyList, applicationContext)
                     }
                 } else {
                     runOnUiThread {

@@ -62,6 +62,7 @@ class LoginActivity : AppCompatActivity() {
                     // Store the token in shared preferences
                     val prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE)
                     prefs.edit().putString("token", token).apply()
+                    prefs.edit().putString("email", findViewById<EditText>(R.id.email).text.toString()).apply()
 
                     // Launch the new activity
                     startActivity(Intent(this@LoginActivity, PartyListActivity::class.java))

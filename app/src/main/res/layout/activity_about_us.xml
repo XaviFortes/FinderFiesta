@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <Button
+        android:id="@+id/calin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="LinkedIn"
+        app:layout_constraintEnd_toEndOf="@+id/ca"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ca"
+        app:layout_constraintTop_toBottomOf="@+id/ca" />
+
+    <TextView
+        android:id="@+id/ca"
+        android:layout_width="102dp"
+        android:layout_height="18dp"
+        android:text="Carlos Antón"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/xf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/chlin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="LinkedIn"
+        app:layout_constraintEnd_toEndOf="@+id/charlie"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/charlie"
+        app:layout_constraintTop_toBottomOf="@+id/charlie" />
+
+    <TextView
+        android:id="@+id/charlie"
+        android:layout_width="102dp"
+        android:layout_height="18dp"
+        android:text="Carlos Hinojosa"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/xf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/title_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:text="Sobre Nosotros"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
+
+    <TextView
+        android:id="@+id/version_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="328dp"
+        android:paddingStart="24dp"
+        android:paddingTop="16dp"
+        android:text="Version: 1.0.0"
+        android:textColor="@color/gray"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/team_textview"
+        android:layout_width="153dp"
+        android:layout_height="47dp"
+        android:paddingStart="24dp"
+        android:paddingTop="16dp"
+        android:text="Miembros"
+        android:textAlignment="textStart"
+        android:textColor="@color/gray"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/xf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.966" />
+
+    <ImageView
+        android:id="@+id/logo_imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:src="@drawable/logo1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.21" />
+
+    <TextView
+        android:id="@+id/xf"
+        android:layout_width="102dp"
+        android:layout_height="18dp"
+        android:text="Xavi Fortes"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.646" />
+
+    <Button
+        android:id="@+id/xflin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="LinkedIn"
+        app:layout_constraintEnd_toEndOf="@+id/xf"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/xf"
+        app:layout_constraintTop_toBottomOf="@+id/xf" />
+
+    <Button
+        android:id="@+id/xfweb"
+        android:layout_width="103dp"
+        android:layout_height="49dp"
+        android:text="Website"
+        app:layout_constraintEnd_toEndOf="@+id/xf"
+        app:layout_constraintStart_toStartOf="@+id/xf"
+        app:layout_constraintTop_toBottomOf="@+id/xflin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
